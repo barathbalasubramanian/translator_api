@@ -6,7 +6,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.listen(8080)
+const PORT = process.env.PORT || 8080;
+app.listen(8080 , () => { console.log(`Running on PORT : ${ PORT } `) })
 
 const axios = require('axios');
 
